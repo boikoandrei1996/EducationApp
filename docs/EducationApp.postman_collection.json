@@ -1,0 +1,632 @@
+{
+	"info": {
+		"_postman_id": "3d0a922c-cf87-4886-9175-71f0186bdcab",
+		"name": "EducationApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "school",
+			"item": [
+				{
+					"name": "get schools",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/schools/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"schools",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get teachers of school",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/schools/:schoolId/teachers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"schools",
+								":schoolId",
+								"teachers"
+							],
+							"variable": [
+								{
+									"key": "schoolId",
+									"value": "5ed2975c262da73e2c440d20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get students of school",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/schools/:schoolId/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"schools",
+								":schoolId",
+								"students"
+							],
+							"variable": [
+								{
+									"key": "schoolId",
+									"value": "5ed2975c262da73e2c440d20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create school",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"school2\",\n\t\"userId\": \"5ed29675262da73e2c440d1e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/schools/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"schools",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assign teacher to school",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"5ed29675262da73e2c440d1e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/schools/:schoolId/assign/teacher/:teacherId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"schools",
+								":schoolId",
+								"assign",
+								"teacher",
+								":teacherId"
+							],
+							"variable": [
+								{
+									"key": "schoolId",
+									"value": "5ed3ecf823a6fa25a0bb738f"
+								},
+								{
+									"key": "teacherId",
+									"value": "5ed2a9582fc1756c74318e6a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assign student to school",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"5ed29675262da73e2c440d1e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/schools/:schoolId/assign/student/:studentId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"schools",
+								":schoolId",
+								"assign",
+								"student",
+								":studentId"
+							],
+							"variable": [
+								{
+									"key": "schoolId",
+									"value": "5ed3ecf823a6fa25a0bb738f"
+								},
+								{
+									"key": "studentId",
+									"value": "5ed2afc228c56d6eb8e361d7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove teacher from school",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"5ed29675262da73e2c440d1e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/schools/:schoolId/remove/teacher/:teacherId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"schools",
+								":schoolId",
+								"remove",
+								"teacher",
+								":teacherId"
+							],
+							"variable": [
+								{
+									"key": "schoolId",
+									"value": "5ed3ecf823a6fa25a0bb738f"
+								},
+								{
+									"key": "teacherId",
+									"value": "5ed2a9582fc1756c74318e6a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove student from school",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"5ed29675262da73e2c440d1e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/schools/:schoolId/remove/student/:studentId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"schools",
+								":schoolId",
+								"remove",
+								"student",
+								":studentId"
+							],
+							"variable": [
+								{
+									"key": "schoolId",
+									"value": "5ed3ecf823a6fa25a0bb738f"
+								},
+								{
+									"key": "studentId",
+									"value": "5ed2afc228c56d6eb8e361d7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete school",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"5ed29675262da73e2c440d1e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/schools/:schoolId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"schools",
+								":schoolId"
+							],
+							"variable": [
+								{
+									"key": "schoolId",
+									"value": "5ed3ecf823a6fa25a0bb738f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"user5\",\n\t\"role\": \"student\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "class",
+			"item": [
+				{
+					"name": "get all classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/classes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get students of class",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/classes/:classId/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								":classId",
+								"students"
+							],
+							"variable": [
+								{
+									"key": "classId",
+									"value": "5ed3781dfabec676088b9211"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all classes of teacher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/classes/teacher/:teacherId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								"teacher",
+								":teacherId"
+							],
+							"variable": [
+								{
+									"key": "teacherId",
+									"value": "5ed2a9582fc1756c74318e6a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all classes of student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/classes/student/:studentId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								"student",
+								":studentId"
+							],
+							"variable": [
+								{
+									"key": "studentId",
+									"value": "5ed2afc228c56d6eb8e361d7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create class",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"class2\",\n\t\"userId\": \"5ed2a9582fc1756c74318e6a\",\n\t\"schoolId\": \"5ed2975c262da73e2c440d20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assign student to class",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"5ed2a9582fc1756c74318e6a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes/:classId/assign/student/:studentId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								":classId",
+								"assign",
+								"student",
+								":studentId"
+							],
+							"variable": [
+								{
+									"key": "classId",
+									"value": "5ed3781dfabec676088b9211"
+								},
+								{
+									"key": "studentId",
+									"value": "5ed2afc228c56d6eb8e361d7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove student from class",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"5ed2a9582fc1756c74318e6a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes/:classId/remove/student/:studentId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								":classId",
+								"remove",
+								"student",
+								":studentId"
+							],
+							"variable": [
+								{
+									"key": "classId",
+									"value": "5ed3781dfabec676088b9211"
+								},
+								{
+									"key": "studentId",
+									"value": "5ed2afc228c56d6eb8e361d7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete class",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"5ed2a9582fc1756c74318e6a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/classes/:classId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"classes",
+								":classId"
+							],
+							"variable": [
+								{
+									"key": "classId",
+									"value": "5ed3782cfabec676088b9212"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

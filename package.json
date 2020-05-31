@@ -1,0 +1,17 @@
+{
+  "name": "education-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app"
+  },
+  "description": "EducationApp",
+  "author": {
+    "name": "Andrei Boika"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.14.0",
+    "mongodb": "^3.1.0",
+    "mongoose": "^5.9.16"
+  }
+}
